@@ -108,28 +108,6 @@ fastapi-microservice/
 
 ## 🔗 Endpoints & Functionalities
 
-### Auth Service
-- `GET /auth/ping` – Health check.
-
-### Product Service
-- `GET /products/` – Retrieve all products, optionally sync from public API.
-
-### Order Service
-- `POST /orders/` – Create a new order and publish to Redis.  
-Example body:
-```json
-{
-  "user_id": 1,
-  "products": [1, 2],
-  "total_amount": 100
-}
-````
-
-### Payment Service
-
-* `GET /payments/start` – Start Redis consumer to process and mark orders as paid.
-
-### Market Data Services
 
 | Category      | Method & Endpoint       | Description           | Response                                                           |
 | ------------- | ----------------------- | --------------------- | ------------------------------------------------------------------ |
