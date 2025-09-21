@@ -18,7 +18,7 @@ This project is a full-stack FastAPI microservices platform that combines e-comm
 
 ## 📂 Project Structure
 
-```
+<!-- ```
 
 fastapi-microservice/
 │
@@ -55,7 +55,7 @@ fastapi-microservice/
 ├── requirements.txt                # Python dependencies
 └── README.md                       # Project documentation
 
-```
+``` -->
 
 ---
 
