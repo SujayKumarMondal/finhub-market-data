@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+mysql-connector-python
+requests
+kafka-python
+python-dotenv
+pydantic
+confluent-kafka
+redis
+jinja2

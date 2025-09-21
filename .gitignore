@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env/
+
+# MySQL / Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kafka / Temp files
+*.pid
+*.lock
+
+# Coverage / Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Misc
+*.bak
+*.swp
+*.tmp
