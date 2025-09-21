@@ -31,7 +31,8 @@ logs/
 .idea/
 *.sublime-project
 *.sublime-workspace
-
+.env
+env
 # OS
 .DS_Store
 Thumbs.db
