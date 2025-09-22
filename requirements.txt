@@ -9,3 +9,6 @@ pydantic
 confluent-kafka
 redis
 jinja2
+dash
+pyperclip
+dash-bootstrap-components
