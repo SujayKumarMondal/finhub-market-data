@@ -174,6 +174,21 @@ def handle_response(exec_clicks, close_clicks, selected_key, param_values, param
                 html.Span("Response"),
                 dbc.Button("Copy", id={"type": "copy-btn", "index": "1"}, color="info", size="sm",
                            style={"float": "right", "marginLeft": "5px"}),
+                dbc.Toast(
+                    "Copied!",
+                    id="copy-toast",
+                    is_open=False,
+                    duration=2000,
+                    style={
+                        "position": "absolute",
+                        "top": "0px",
+                        "right": "-120px",
+                        "zIndex": 9999,
+                        "width": "100px",
+                        "padding": "2px",
+                        "textAlign": "center"
+                    }
+                ),
                 dbc.Button("Close", id={"type": "close-btn", "index": "1"}, color="danger", size="sm",
                            style={"float": "right"})
             ]),
