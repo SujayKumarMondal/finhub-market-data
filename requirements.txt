@@ -12,3 +12,4 @@ jinja2
 dash
 pyperclip
 dash-bootstrap-components
+finnhub-python
