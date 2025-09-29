@@ -149,7 +149,7 @@ MYSQL_HOST=localhost
 MYSQL_PORT=3306
 MYSQL_USER=root
 MYSQL_PASSWORD=yourpassword
-MYSQL_DB=fastapi_microservice
+MYSQL_DB=finnhub_data
 
 REDIS_HOST=localhost
 REDIS_PORT=6379
