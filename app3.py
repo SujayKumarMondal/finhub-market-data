@@ -11,7 +11,7 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     suppress_callback_exceptions=True
 )
-app.title = "Financial Microservice Explorer"
+app.title = "Finnhub Microservice Explorer"
 server = app.server  # for deployment
 
 # ----------------- Fetch OpenAPI dynamically -----------------
@@ -41,36 +41,65 @@ GOOGLE_FORM_URL = "https://docs.google.com/forms/d/1SG_zFgd_L8Fae65cOAjFdlbjEr5F
 
 # ----------------- Layout -----------------
 app.layout = dbc.Container([
-    # Header with title & feedback
+    # Animated Header with title & feedback
     dbc.Row(
         dbc.Col(
             dbc.Row(
                 [
-                    dbc.Col(html.H2("📊 Financial Microservice Explorer"), width="auto"),
+                    dbc.Col(html.H1(
+                        "📊 Finnhub Microservice Explorer",
+                        style={
+                            "fontSize": "3.2rem",
+                            "fontWeight": "bold",
+                            "color": "#307cbe",
+                            "textShadow": "2px 2px 8px #00f2fe, 0 0 10px #fff",
+                            "animation": "fadeInDown 1s"
+                        }
+                    ), width="auto"),
                     dbc.Col(html.A("Feedback", href=GOOGLE_FORM_URL, target="_blank",
-                                   className="btn btn-primary"), width="auto", className="ms-auto")
+                                   className="btn btn-lg btn-primary",
+                                   style={"fontSize": "1.3rem", "fontWeight": "bold", "boxShadow": "0 4px 12px #4facfe"}), width="auto", className="ms-auto")
                 ],
                 align="center",
                 className="w-100"
             )
         ),
-        className="my-3"
+        className="my-4"
     ),
 
-    # Dropdown + Try button
+    # Large Dropdown + Animated Try button
     dbc.Row([
         dbc.Col(dcc.Dropdown(
             id="endpoint-dropdown",
             options=[{"label": k, "value": k} for k in endpoints.keys()],
             placeholder="Select an endpoint...",
-            clearable=True
+            clearable=True,
+            style={
+                "fontSize": "1.5rem",
+                "height": "60px",
+                "padding": "10px",
+                "borderRadius": "12px",
+                "boxShadow": "0 2px 8px #00f2fe"
+            }
         ), width=8),
-        dbc.Col(dbc.Button("Try it out", id="try-btn", color="success"), width=4)
-    ], className="mb-4"),
+        dbc.Col(dbc.Button(
+            "Try it out",
+            id="try-btn",
+            color="success",
+            size="lg",
+            style={
+                "fontSize": "1.5rem",
+                "height": "60px",
+                "borderRadius": "12px",
+                "boxShadow": "0 2px 8px #4facfe",
+                "animation": "pulse 1.5s infinite"
+            }
+        ), width=4)
+    ], className="mb-5"),
 
-    # Swagger-like and Response screens
-    html.Div(id="swagger-screen"),
-    html.Div(id="response-screen", style={"marginTop": "20px"}),
+    # Swagger-like and Response screens with animation
+    html.Div(id="swagger-screen", style={"animation": "fadeInUp 0.8s"}),
+    html.Div(id="response-screen", style={"marginTop": "20px", "animation": "fadeInUp 1.2s"}),
 
     # Toast for copy notification
     dbc.Toast(
@@ -80,7 +109,7 @@ app.layout = dbc.Container([
         is_open=False,
         duration=2000,
         icon="success",
-        style={"position": "fixed", "top": 20, "right": 20, "width": 150}
+        style={"position": "fixed", "top": 20, "right": 20, "width": 180, "fontSize": "1.2rem", "boxShadow": "0 2px 8px #00f2fe"}
     )
 ])
 
